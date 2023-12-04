@@ -28,5 +28,25 @@ namespace Project.Euler {
             }
             return suma;
         }
-    }   
+
+        public long Problem003(long number) {
+            Utils utils = new Utils();
+            long largestFactor = 2;
+            if (utils.IsPrime(number)) {
+                return number;
+            }
+
+            for (long divisor=3; (divisor*divisor)<=number; divisor+=2) {
+                if (number % divisor == 0) {
+                    largestFactor = divisor;
+                    number /= divisor;
+                }
+            }
+
+            if (number > largestFactor) {
+                largestFactor = number;
+            }
+            return largestFactor;
+        }
+    }
 }

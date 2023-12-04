@@ -19,5 +19,15 @@ namespace Project.Euler.Test {
         public void Problem002_CalibrationTest() {
             Assert.Equal(44, problem.Problem002(90));
         }
+
+        [Theory]
+        [InlineData(11, 11)]
+        [InlineData(1535348471, 1535348471)]
+        [InlineData(29, 13_195)]
+        [InlineData(6857, 600_851_475_143)]
+        public void Problem003_CalibrationTest(long want, long number) {
+            long got = problem.Problem003(number);
+            Assert.Equal(want, got);
+        }
     }
 }
