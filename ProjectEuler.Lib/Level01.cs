@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http.Headers;
 
 namespace Project.Euler {
     public class Level01 {
@@ -54,7 +55,25 @@ namespace Project.Euler {
     
         public long Problem004(int digits) {
             // Largest palindrome product
-            throw new NotImplementedException("Not implemented yet ='(");
+            long max = (long)Math.Pow(10, digits) - 1;
+            long largest = 0;
+
+           for (long i=max; i>0; i--) {
+                for (long j=max; j>0; j--) {
+                    long product = i * j;
+                    // Convert long to string
+                    string number = (product).ToString();
+                    // Reverse string
+                    char[] charArray = number.ToCharArray();
+                    Array.Reverse(charArray);
+                    string reverse = new string(charArray);
+                    // Compare
+                    if (number == reverse && product > largest) {
+                        largest = product;
+                    }
+                }
+           }
+           return largest;
         }
     }
 }
