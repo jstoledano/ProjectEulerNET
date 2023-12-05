@@ -51,5 +51,10 @@ namespace Project.Euler {
             }
             return largestFactor;
         }
+    
+        public long Problem004(int digits) {
+            // Largest palindrome product
+            throw new NotImplementedException("Not implemented yet ='(");
+        }
     }
 }

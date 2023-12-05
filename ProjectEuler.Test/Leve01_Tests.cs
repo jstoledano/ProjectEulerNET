@@ -29,5 +29,10 @@ namespace Project.Euler.Test {
             long got = problem.Problem003(number);
             Assert.Equal(want, got);
         }
+
+        [Fact]
+        public void Problem004_CalibrationTest() {
+            Assert.Equal(9009, problem.Problem004(2));
+        }
     }
 }
