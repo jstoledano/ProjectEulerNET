@@ -108,5 +108,23 @@ namespace Project.Euler {
 
             return diff;
         }
+
+        public long Problem007(int limit) {
+            long prime = 3;
+            int cuenta = 1;
+
+            if (limit == 1) {
+                return 2;
+            }
+
+            do {
+                if (utils.IsPrime(prime)) {
+                    cuenta++;
+                }
+                prime += 2;
+            } while (cuenta < limit);
+
+            return prime;
+        }
     }
 }
