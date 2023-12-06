@@ -75,5 +75,22 @@ namespace Project.Euler {
            }
            return largest;
         }
+
+        public long Problem005(long max) {
+            long small = 1;
+        
+            for(long k = 1; k < max; k++) {
+                if(small % k > 0) {
+                    for (long j = 1; j < max; j++) {
+                        if ((small * j) % k == 0) {
+                            small *= j;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            return small;
+        }
     }
 }
