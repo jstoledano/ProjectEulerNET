@@ -3,6 +3,8 @@ using System.Net.Http.Headers;
 
 namespace Project.Euler {
     public class Level01 {
+        Utils utils = new Utils();
+    
         public int Problem001(int limite) {
             // Multiples of 3 or 5
             int suma = 0;
@@ -34,7 +36,6 @@ namespace Project.Euler {
         public long Problem003(long number) {
             // Largest Prime Factor
         
-            Utils utils = new Utils();
             long largestFactor = 2;
             if (utils.IsPrime(number)) {
                 return number;
@@ -91,6 +92,21 @@ namespace Project.Euler {
             }
 
             return small;
+        }
+
+        public long Problem006(long max) {
+            // Sum Square Difference
+            long sum_of_squares = 0;
+            long simple_sum = 0;
+            long diff = 0;
+
+            for (long i = 1; i <= max; i++) {
+                sum_of_squares += utils.Cuadrado(i);
+                simple_sum += i;
+            }
+            diff = utils.Cuadrado(simple_sum) - sum_of_squares;
+
+            return diff;
         }
     }
 }

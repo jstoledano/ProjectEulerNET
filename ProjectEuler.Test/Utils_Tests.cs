@@ -19,5 +19,14 @@ namespace Project.Euler.Test {
             bool got = utils.IsPrime(number);
             Assert.Equal(want, got);
         }
+
+        [Theory]
+        [InlineData(2, 4)]
+        [InlineData(3, 9)]
+        [InlineData(4, 16)]
+        public void Cuadrados_Test(long number, long want) {
+            long got = utils.Cuadrado(number);
+            Assert.Equal(want, got);
+        }
     }
 }

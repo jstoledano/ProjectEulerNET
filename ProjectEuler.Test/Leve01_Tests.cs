@@ -42,5 +42,12 @@ namespace Project.Euler.Test {
             long got = problem.Problem005(max);
             Assert.Equal(want, got);
         }
+
+        [Theory]
+        [InlineData(2640, 10)]
+        public void Problem006_CalibrationTest(long want, long max) {
+            long got = problem.Problem006(max);
+            Assert.Equal(want, got);
+        }
     }
 }

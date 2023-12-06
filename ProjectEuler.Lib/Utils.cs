@@ -18,5 +18,9 @@ namespace Project.Euler {
             }
             return isPrime(number);
         }
+
+        public long Cuadrado(long number) {
+            return number * number;
+        }
     }
 }
