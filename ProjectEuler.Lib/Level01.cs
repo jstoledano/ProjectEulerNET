@@ -112,17 +112,19 @@ namespace Project.Euler {
         public long Problem007(int limit) {
             long prime = 3;
             int cuenta = 1;
+            int number = 3;
 
             if (limit == 1) {
                 return 2;
             }
 
-            do {
-                if (utils.IsPrime(prime)) {
+            while (cuenta < limit) {
+                if (utils.IsPrime(number)) {
                     cuenta++;
+                    prime = number;
                 }
-                prime += 2;
-            } while (cuenta < limit);
+                number += 2;
+            }
 
             return prime;
         }
