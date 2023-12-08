@@ -60,7 +60,7 @@ namespace Project.Euler.Test {
 
         [Theory]
         [InlineData(4, 5832)]
-        // [InlineData(13, 23514624000)]
+        [InlineData(13, 23514624000)]
         public void Problem008_CalibrationTest(int digit, decimal want) {
             decimal got = problem.Problem008(digit);
             Assert.Equal(want, got);
