@@ -64,6 +64,14 @@ namespace Project.Euler.Test {
         public void Problem008_CalibrationTest(int digit, decimal want) {
             decimal got = problem.Problem008(digit);
             Assert.Equal(want, got);
+        }
+
+        [Theory]
+        [InlineData(12, 60)]
+        [InlineData(1000, 31875000)]
+        public void Poblem009_CalibrationTest(int sum, int want) {
+            int got = problem.Problem009(sum);
+            Assert.Equal(want, got);
         } 
     }
 }

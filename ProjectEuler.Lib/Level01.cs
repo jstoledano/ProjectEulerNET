@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Net.Http.Headers;
 
 namespace Project.Euler {
@@ -163,6 +164,32 @@ namespace Project.Euler {
             }
 
             return maxProduct;
+        }
+
+        public int Problem009(int sum) {
+            int product = 0;
+            int suma = 0;
+            int catetos = 0;
+            int hipotenusa = 0;
+
+            for (int a = 1; a < sum; a++) {
+                for (int b = 1; b < sum; b++) {
+                    for (int c = 1; c < sum; c++) {
+                        suma = a + b + c;
+                        if (a < b && b < c) {
+                            catetos = a*a + b*b;
+                            hipotenusa = c*c;
+                            if (catetos == hipotenusa) {
+                                if (suma == sum) {
+                                    product = a * b *c;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return product;
         }
     }
 }
