@@ -191,5 +191,17 @@ namespace Project.Euler {
 
             return product;
         }
+
+        public int Problem010(int limit) {
+            int suma = 2;
+
+            for (int i = 3; i < limit; i++) {
+                if (utils.IsPrime(i)) {
+                    suma += i;
+                }
+            }
+
+            return suma;
+        }
     }
 }

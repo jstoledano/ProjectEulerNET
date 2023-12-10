@@ -69,8 +69,16 @@ namespace Project.Euler.Test {
         [Theory]
         [InlineData(12, 60)]
         [InlineData(1000, 31875000)]
-        public void Poblem009_CalibrationTest(int sum, int want) {
+        public void Problem009_CalibrationTest(int sum, int want) {
             int got = problem.Problem009(sum);
+            Assert.Equal(want, got);
+        }
+
+        [Theory]
+        [InlineData(10, 17)]
+        [InlineData(2_000_000, 1179908154)]
+        public void Problem010_CalibrationTest(int sum, int want) {
+            int got = problem.Problem010(sum);
             Assert.Equal(want, got);
         } 
     }

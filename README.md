@@ -10,8 +10,8 @@
 - [X] Problema 006
 - [X] Problema 007
 - [X] Problema 008
-- [ ] Problema 009
-- [ ] Problema 010
+- [X] Problema 009
+- [X] Problema 010
 - [ ] Problema 011
 - [ ] Problema 012
 - [ ] Problema 013
