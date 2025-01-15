@@ -1,5 +1,6 @@
 using Xunit;
 using Project.Euler;
+using System;
 
 namespace Project.Euler.Test {
     public class Level01_Tests {
@@ -76,10 +77,12 @@ namespace Project.Euler.Test {
 
         [Theory]
         [InlineData(10, 17)]
-        [InlineData(2_000_000, 1179908154)]
-        public void Problem010_CalibrationTest(int sum, int want) {
-            int got = problem.Problem010(sum);
+        [InlineData(2_000_000, 142913828922)]
+        public void Problem010_CalibrationTest(Int64 sum, Int64 want) {
+            Int64 got = problem.Problem010(sum);
             Assert.Equal(want, got);
-        } 
+        }
+
+        
     }
 }

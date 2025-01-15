@@ -167,6 +167,13 @@ namespace Project.Euler {
         }
 
         public int Problem009(int sum) {
+            // A Pythagorean triplet is a set of three natural numbers,
+            // a < b < c, for wich
+            //        a^2 + b^2 = c^2
+            // For example, 3^2 + 4^2 = 9 + 16 = 25 = 5^2
+            // There exists exactly one Pythagorean triplet for 
+            // which a + b + c = 1000. 
+            // Find the product abc.
             int product = 0;
             int suma = 0;
             int catetos = 0;
@@ -192,12 +199,18 @@ namespace Project.Euler {
             return product;
         }
 
-        public int Problem010(int limit) {
-            int suma = 2;
+        public Int64 Problem010(Int64 limit) {
+            // Suma de primos
+            //
+            // La suma de los primos menores de 10 es 2+3+5+7=15
+            // ¿Cuál es la suma de los primos menores de 
+            // dos millones?
 
-            for (int i = 3; i < limit; i++) {
+            Int64 suma = 2;
+
+            for (int i = 3; i <= limit; i++) {
                 if (utils.IsPrime(i)) {
-                    suma += i;
+                    suma += Convert.ToInt64(i);
                 }
             }
 

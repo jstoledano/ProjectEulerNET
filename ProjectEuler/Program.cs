@@ -12,6 +12,9 @@ namespace PE {
             Console.WriteLine($"Problema 005: {level01.Problem005(20)}");
             Console.WriteLine($"Problema 006: {level01.Problem006(100)}");
             Console.WriteLine($"Problema 007: {level01.Problem007(10_001)}");
+            Console.WriteLine($"Problema 008: {level01.Problem008(13)}");
+            Console.WriteLine($"Problema 009: {level01.Problem009(1_000)}");
+            Console.WriteLine($"Problema 010: {level01.Problem010(2_000_000)}");
         }
     }
 }
